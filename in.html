@@ -1,0 +1,941 @@
+<html lang="zh-ch" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>平安成电智慧通行</title>
+    <style>
+        [v-cloak] {
+            display: none
+        }
+    </style>
+    <link href="./css/chunk-1a8cf038.70774aa0.css" rel="prefetch">
+    <link href="./css/reservation.31e82a19.css" rel="prefetch">
+    <link href="./css/app.32e770dd.css" rel="preload" as="style">
+    <link href="./css/chunk-vendors.04fb77aa.css" rel="preload" as="style">
+    <link href="./css/chunk-vendors.04fb77aa.css" rel="stylesheet">
+    <link href="./css/app.32e770dd.css" rel="stylesheet">
+    <meta name="theme-color" content="#00C4A4">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="平安成电智慧通行">
+    <link rel="apple-touch-icon" href="./img/icons/ico.png">
+    <link rel="mask-icon" href="./img/icons/ico.png" color="#00C4A4">
+    <meta name="msapplication-TileImage" content="./img/icons/ico.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <style type="text/css" id="vuetify-theme-stylesheet">
+        a {
+            color: #00c4a4;
+        }
+        
+        .primary {
+            background-color: #00c4a4 !important;
+            border-color: #00c4a4 !important;
+        }
+        
+        .primary--text {
+            color: #00c4a4 !important;
+            caret-color: #00c4a4 !important;
+        }
+        
+        .primary.lighten-5 {
+            background-color: #c3ffff !important;
+            border-color: #c3ffff !important;
+        }
+        
+        .primary--text.text--lighten-5 {
+            color: #c3ffff !important;
+            caret-color: #c3ffff !important;
+        }
+        
+        .primary.lighten-4 {
+            background-color: #a4ffff !important;
+            border-color: #a4ffff !important;
+        }
+        
+        .primary--text.text--lighten-4 {
+            color: #a4ffff !important;
+            caret-color: #a4ffff !important;
+        }
+        
+        .primary.lighten-3 {
+            background-color: #85fff7 !important;
+            border-color: #85fff7 !important;
+        }
+        
+        .primary--text.text--lighten-3 {
+            color: #85fff7 !important;
+            caret-color: #85fff7 !important;
+        }
+        
+        .primary.lighten-2 {
+            background-color: #65fedb !important;
+            border-color: #65fedb !important;
+        }
+        
+        .primary--text.text--lighten-2 {
+            color: #65fedb !important;
+            caret-color: #65fedb !important;
+        }
+        
+        .primary.lighten-1 {
+            background-color: #41e0bf !important;
+            border-color: #41e0bf !important;
+        }
+        
+        .primary--text.text--lighten-1 {
+            color: #41e0bf !important;
+            caret-color: #41e0bf !important;
+        }
+        
+        .primary.darken-1 {
+            background-color: #00a88a !important;
+            border-color: #00a88a !important;
+        }
+        
+        .primary--text.text--darken-1 {
+            color: #00a88a !important;
+            caret-color: #00a88a !important;
+        }
+        
+        .primary.darken-2 {
+            background-color: #008d70 !important;
+            border-color: #008d70 !important;
+        }
+        
+        .primary--text.text--darken-2 {
+            color: #008d70 !important;
+            caret-color: #008d70 !important;
+        }
+        
+        .primary.darken-3 {
+            background-color: #007358 !important;
+            border-color: #007358 !important;
+        }
+        
+        .primary--text.text--darken-3 {
+            color: #007358 !important;
+            caret-color: #007358 !important;
+        }
+        
+        .primary.darken-4 {
+            background-color: #005941 !important;
+            border-color: #005941 !important;
+        }
+        
+        .primary--text.text--darken-4 {
+            color: #005941 !important;
+            caret-color: #005941 !important;
+        }
+        
+        .secondary {
+            background-color: #424242 !important;
+            border-color: #424242 !important;
+        }
+        
+        .secondary--text {
+            color: #424242 !important;
+            caret-color: #424242 !important;
+        }
+        
+        .secondary.lighten-5 {
+            background-color: #c1c1c1 !important;
+            border-color: #c1c1c1 !important;
+        }
+        
+        .secondary--text.text--lighten-5 {
+            color: #c1c1c1 !important;
+            caret-color: #c1c1c1 !important;
+        }
+        
+        .secondary.lighten-4 {
+            background-color: #a6a6a6 !important;
+            border-color: #a6a6a6 !important;
+        }
+        
+        .secondary--text.text--lighten-4 {
+            color: #a6a6a6 !important;
+            caret-color: #a6a6a6 !important;
+        }
+        
+        .secondary.lighten-3 {
+            background-color: #8b8b8b !important;
+            border-color: #8b8b8b !important;
+        }
+        
+        .secondary--text.text--lighten-3 {
+            color: #8b8b8b !important;
+            caret-color: #8b8b8b !important;
+        }
+        
+        .secondary.lighten-2 {
+            background-color: #727272 !important;
+            border-color: #727272 !important;
+        }
+        
+        .secondary--text.text--lighten-2 {
+            color: #727272 !important;
+            caret-color: #727272 !important;
+        }
+        
+        .secondary.lighten-1 {
+            background-color: #595959 !important;
+            border-color: #595959 !important;
+        }
+        
+        .secondary--text.text--lighten-1 {
+            color: #595959 !important;
+            caret-color: #595959 !important;
+        }
+        
+        .secondary.darken-1 {
+            background-color: #2c2c2c !important;
+            border-color: #2c2c2c !important;
+        }
+        
+        .secondary--text.text--darken-1 {
+            color: #2c2c2c !important;
+            caret-color: #2c2c2c !important;
+        }
+        
+        .secondary.darken-2 {
+            background-color: #171717 !important;
+            border-color: #171717 !important;
+        }
+        
+        .secondary--text.text--darken-2 {
+            color: #171717 !important;
+            caret-color: #171717 !important;
+        }
+        
+        .secondary.darken-3 {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        
+        .secondary--text.text--darken-3 {
+            color: #000000 !important;
+            caret-color: #000000 !important;
+        }
+        
+        .secondary.darken-4 {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        
+        .secondary--text.text--darken-4 {
+            color: #000000 !important;
+            caret-color: #000000 !important;
+        }
+        
+        .accent {
+            background-color: #00d6b3 !important;
+            border-color: #00d6b3 !important;
+        }
+        
+        .accent--text {
+            color: #00d6b3 !important;
+            caret-color: #00d6b3 !important;
+        }
+        
+        .accent.lighten-5 {
+            background-color: #caffff !important;
+            border-color: #caffff !important;
+        }
+        
+        .accent--text.text--lighten-5 {
+            color: #caffff !important;
+            caret-color: #caffff !important;
+        }
+        
+        .accent.lighten-4 {
+            background-color: #abffff !important;
+            border-color: #abffff !important;
+        }
+        
+        .accent--text.text--lighten-4 {
+            color: #abffff !important;
+            caret-color: #abffff !important;
+        }
+        
+        .accent.lighten-3 {
+            background-color: #8bffff !important;
+            border-color: #8bffff !important;
+        }
+        
+        .accent--text.text--lighten-3 {
+            color: #8bffff !important;
+            caret-color: #8bffff !important;
+        }
+        
+        .accent.lighten-2 {
+            background-color: #6affeb !important;
+            border-color: #6affeb !important;
+        }
+        
+        .accent--text.text--lighten-2 {
+            color: #6affeb !important;
+            caret-color: #6affeb !important;
+        }
+        
+        .accent.lighten-1 {
+            background-color: #45f3ce !important;
+            border-color: #45f3ce !important;
+        }
+        
+        .accent--text.text--lighten-1 {
+            color: #45f3ce !important;
+            caret-color: #45f3ce !important;
+        }
+        
+        .accent.darken-1 {
+            background-color: #00ba98 !important;
+            border-color: #00ba98 !important;
+        }
+        
+        .accent--text.text--darken-1 {
+            color: #00ba98 !important;
+            caret-color: #00ba98 !important;
+        }
+        
+        .accent.darken-2 {
+            background-color: #009e7e !important;
+            border-color: #009e7e !important;
+        }
+        
+        .accent--text.text--darken-2 {
+            color: #009e7e !important;
+            caret-color: #009e7e !important;
+        }
+        
+        .accent.darken-3 {
+            background-color: #008365 !important;
+            border-color: #008365 !important;
+        }
+        
+        .accent--text.text--darken-3 {
+            color: #008365 !important;
+            caret-color: #008365 !important;
+        }
+        
+        .accent.darken-4 {
+            background-color: #00694d !important;
+            border-color: #00694d !important;
+        }
+        
+        .accent--text.text--darken-4 {
+            color: #00694d !important;
+            caret-color: #00694d !important;
+        }
+        
+        .error {
+            background-color: #ff5252 !important;
+            border-color: #ff5252 !important;
+        }
+        
+        .error--text {
+            color: #ff5252 !important;
+            caret-color: #ff5252 !important;
+        }
+        
+        .error.lighten-5 {
+            background-color: #ffe4d5 !important;
+            border-color: #ffe4d5 !important;
+        }
+        
+        .error--text.text--lighten-5 {
+            color: #ffe4d5 !important;
+            caret-color: #ffe4d5 !important;
+        }
+        
+        .error.lighten-4 {
+            background-color: #ffc6b9 !important;
+            border-color: #ffc6b9 !important;
+        }
+        
+        .error--text.text--lighten-4 {
+            color: #ffc6b9 !important;
+            caret-color: #ffc6b9 !important;
+        }
+        
+        .error.lighten-3 {
+            background-color: #ffa99e !important;
+            border-color: #ffa99e !important;
+        }
+        
+        .error--text.text--lighten-3 {
+            color: #ffa99e !important;
+            caret-color: #ffa99e !important;
+        }
+        
+        .error.lighten-2 {
+            background-color: #ff8c84 !important;
+            border-color: #ff8c84 !important;
+        }
+        
+        .error--text.text--lighten-2 {
+            color: #ff8c84 !important;
+            caret-color: #ff8c84 !important;
+        }
+        
+        .error.lighten-1 {
+            background-color: #ff6f6a !important;
+            border-color: #ff6f6a !important;
+        }
+        
+        .error--text.text--lighten-1 {
+            color: #ff6f6a !important;
+            caret-color: #ff6f6a !important;
+        }
+        
+        .error.darken-1 {
+            background-color: #df323b !important;
+            border-color: #df323b !important;
+        }
+        
+        .error--text.text--darken-1 {
+            color: #df323b !important;
+            caret-color: #df323b !important;
+        }
+        
+        .error.darken-2 {
+            background-color: #bf0025 !important;
+            border-color: #bf0025 !important;
+        }
+        
+        .error--text.text--darken-2 {
+            color: #bf0025 !important;
+            caret-color: #bf0025 !important;
+        }
+        
+        .error.darken-3 {
+            background-color: #9f0010 !important;
+            border-color: #9f0010 !important;
+        }
+        
+        .error--text.text--darken-3 {
+            color: #9f0010 !important;
+            caret-color: #9f0010 !important;
+        }
+        
+        .error.darken-4 {
+            background-color: #800000 !important;
+            border-color: #800000 !important;
+        }
+        
+        .error--text.text--darken-4 {
+            color: #800000 !important;
+            caret-color: #800000 !important;
+        }
+        
+        .info {
+            background-color: #2196f3 !important;
+            border-color: #2196f3 !important;
+        }
+        
+        .info--text {
+            color: #2196f3 !important;
+            caret-color: #2196f3 !important;
+        }
+        
+        .info.lighten-5 {
+            background-color: #d4ffff !important;
+            border-color: #d4ffff !important;
+        }
+        
+        .info--text.text--lighten-5 {
+            color: #d4ffff !important;
+            caret-color: #d4ffff !important;
+        }
+        
+        .info.lighten-4 {
+            background-color: #b5ffff !important;
+            border-color: #b5ffff !important;
+        }
+        
+        .info--text.text--lighten-4 {
+            color: #b5ffff !important;
+            caret-color: #b5ffff !important;
+        }
+        
+        .info.lighten-3 {
+            background-color: #95e8ff !important;
+            border-color: #95e8ff !important;
+        }
+        
+        .info--text.text--lighten-3 {
+            color: #95e8ff !important;
+            caret-color: #95e8ff !important;
+        }
+        
+        .info.lighten-2 {
+            background-color: #75ccff !important;
+            border-color: #75ccff !important;
+        }
+        
+        .info--text.text--lighten-2 {
+            color: #75ccff !important;
+            caret-color: #75ccff !important;
+        }
+        
+        .info.lighten-1 {
+            background-color: #51b0ff !important;
+            border-color: #51b0ff !important;
+        }
+        
+        .info--text.text--lighten-1 {
+            color: #51b0ff !important;
+            caret-color: #51b0ff !important;
+        }
+        
+        .info.darken-1 {
+            background-color: #007cd6 !important;
+            border-color: #007cd6 !important;
+        }
+        
+        .info--text.text--darken-1 {
+            color: #007cd6 !important;
+            caret-color: #007cd6 !important;
+        }
+        
+        .info.darken-2 {
+            background-color: #0064ba !important;
+            border-color: #0064ba !important;
+        }
+        
+        .info--text.text--darken-2 {
+            color: #0064ba !important;
+            caret-color: #0064ba !important;
+        }
+        
+        .info.darken-3 {
+            background-color: #004d9f !important;
+            border-color: #004d9f !important;
+        }
+        
+        .info--text.text--darken-3 {
+            color: #004d9f !important;
+            caret-color: #004d9f !important;
+        }
+        
+        .info.darken-4 {
+            background-color: #003784 !important;
+            border-color: #003784 !important;
+        }
+        
+        .info--text.text--darken-4 {
+            color: #003784 !important;
+            caret-color: #003784 !important;
+        }
+        
+        .success {
+            background-color: #4caf50 !important;
+            border-color: #4caf50 !important;
+        }
+        
+        .success--text {
+            color: #4caf50 !important;
+            caret-color: #4caf50 !important;
+        }
+        
+        .success.lighten-5 {
+            background-color: #dcffd6 !important;
+            border-color: #dcffd6 !important;
+        }
+        
+        .success--text.text--lighten-5 {
+            color: #dcffd6 !important;
+            caret-color: #dcffd6 !important;
+        }
+        
+        .success.lighten-4 {
+            background-color: #beffba !important;
+            border-color: #beffba !important;
+        }
+        
+        .success--text.text--lighten-4 {
+            color: #beffba !important;
+            caret-color: #beffba !important;
+        }
+        
+        .success.lighten-3 {
+            background-color: #a2ff9e !important;
+            border-color: #a2ff9e !important;
+        }
+        
+        .success--text.text--lighten-3 {
+            color: #a2ff9e !important;
+            caret-color: #a2ff9e !important;
+        }
+        
+        .success.lighten-2 {
+            background-color: #85e783 !important;
+            border-color: #85e783 !important;
+        }
+        
+        .success--text.text--lighten-2 {
+            color: #85e783 !important;
+            caret-color: #85e783 !important;
+        }
+        
+        .success.lighten-1 {
+            background-color: #69cb69 !important;
+            border-color: #69cb69 !important;
+        }
+        
+        .success--text.text--lighten-1 {
+            color: #69cb69 !important;
+            caret-color: #69cb69 !important;
+        }
+        
+        .success.darken-1 {
+            background-color: #2d9437 !important;
+            border-color: #2d9437 !important;
+        }
+        
+        .success--text.text--darken-1 {
+            color: #2d9437 !important;
+            caret-color: #2d9437 !important;
+        }
+        
+        .success.darken-2 {
+            background-color: #00791e !important;
+            border-color: #00791e !important;
+        }
+        
+        .success--text.text--darken-2 {
+            color: #00791e !important;
+            caret-color: #00791e !important;
+        }
+        
+        .success.darken-3 {
+            background-color: #006000 !important;
+            border-color: #006000 !important;
+        }
+        
+        .success--text.text--darken-3 {
+            color: #006000 !important;
+            caret-color: #006000 !important;
+        }
+        
+        .success.darken-4 {
+            background-color: #004700 !important;
+            border-color: #004700 !important;
+        }
+        
+        .success--text.text--darken-4 {
+            color: #004700 !important;
+            caret-color: #004700 !important;
+        }
+        
+        .warning {
+            background-color: #fb8c00 !important;
+            border-color: #fb8c00 !important;
+        }
+        
+        .warning--text {
+            color: #fb8c00 !important;
+            caret-color: #fb8c00 !important;
+        }
+        
+        .warning.lighten-5 {
+            background-color: #ffff9e !important;
+            border-color: #ffff9e !important;
+        }
+        
+        .warning--text.text--lighten-5 {
+            color: #ffff9e !important;
+            caret-color: #ffff9e !important;
+        }
+        
+        .warning.lighten-4 {
+            background-color: #fffb82 !important;
+            border-color: #fffb82 !important;
+        }
+        
+        .warning--text.text--lighten-4 {
+            color: #fffb82 !important;
+            caret-color: #fffb82 !important;
+        }
+        
+        .warning.lighten-3 {
+            background-color: #ffdf67 !important;
+            border-color: #ffdf67 !important;
+        }
+        
+        .warning--text.text--lighten-3 {
+            color: #ffdf67 !important;
+            caret-color: #ffdf67 !important;
+        }
+        
+        .warning.lighten-2 {
+            background-color: #ffc24b !important;
+            border-color: #ffc24b !important;
+        }
+        
+        .warning--text.text--lighten-2 {
+            color: #ffc24b !important;
+            caret-color: #ffc24b !important;
+        }
+        
+        .warning.lighten-1 {
+            background-color: #ffa72d !important;
+            border-color: #ffa72d !important;
+        }
+        
+        .warning--text.text--lighten-1 {
+            color: #ffa72d !important;
+            caret-color: #ffa72d !important;
+        }
+        
+        .warning.darken-1 {
+            background-color: #db7200 !important;
+            border-color: #db7200 !important;
+        }
+        
+        .warning--text.text--darken-1 {
+            color: #db7200 !important;
+            caret-color: #db7200 !important;
+        }
+        
+        .warning.darken-2 {
+            background-color: #bb5900 !important;
+            border-color: #bb5900 !important;
+        }
+        
+        .warning--text.text--darken-2 {
+            color: #bb5900 !important;
+            caret-color: #bb5900 !important;
+        }
+        
+        .warning.darken-3 {
+            background-color: #9d4000 !important;
+            border-color: #9d4000 !important;
+        }
+        
+        .warning--text.text--darken-3 {
+            color: #9d4000 !important;
+            caret-color: #9d4000 !important;
+        }
+        
+        .warning.darken-4 {
+            background-color: #802700 !important;
+            border-color: #802700 !important;
+        }
+        
+        .warning--text.text--darken-4 {
+            color: #802700 !important;
+            caret-color: #802700 !important;
+        }
+        
+        .wrap[data-v-43a209c8] {
+            overflow: hidden
+        }
+        
+        #box[data-v-43a209c8] {
+            width: 80000%
+        }
+        
+        #box div[data-v-43a209c8] {
+            float: left
+        }
+        
+        #marquee[data-v-43a209c8] {
+            margin: 0 10px 0 0
+        }
+        
+        #node[data-v-43a209c8] {
+            position: absolute;
+            z-index: -999;
+        }
+    </style>
+</head>
+
+<body style="">
+    <div data-app="true" class="application theme--light" id="app">
+        <div tabindex="-1" data-v-e187dc34="" class="v-dialog__content" style="z-index: 0;">
+            <div class="v-dialog" style="width: 700px; display: none;">
+                <div data-v-e187dc34="" class="layout column">
+                    <div data-v-e187dc34="" class="pa-3 v-card v-sheet theme--light">
+                        <div data-v-e187dc34="" class="layout column">
+                            <div data-v-e187dc34="" style="max-height: 400px; overflow: auto; text-align: justify; padding: 10px;">。</div>
+                            <div data-v-e187dc34="" class="layout justify-center"><button data-v-e187dc34="" disabled="disabled" type="button" class="primary v-btn v-btn--disabled theme--light"><div class="v-btn__content">进校登记</div></button><button data-v-e187dc34="" type="button" class="error v-btn theme--light"><div class="v-btn__content">取消</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div tabindex="-1" data-v-790bada4="" class="v-dialog__content" style="z-index: 0;">
+            <div class="v-dialog v-dialog--persistent" style="max-width: 400px; display: none;">
+                <div data-v-790bada4="" class="v-card v-sheet theme--light" style="max-width: 400px;">
+                    <div data-v-790bada4="" class="v-card__text py-2 body-1">
+                        <!---->
+                        <div data-v-790bada4="" class="flex justify-center layout row">
+                            <div data-v-d9565426="" class="layout mx-2 column">
+                                <div data-v-d9565426="" class="flex align-center column justify-center layout"><i data-v-d9565426="" aria-hidden="true" class="v-icon pb-3 mdi mdi-timer-sand-empty theme--light" style="font-size: 36px;"></i><span data-v-d9565426="" class="subheading">由于长时间未操作, 您的登录信息已失效</span></div>
+                                <div data-v-d9565426="" class="flex">
+                                    <div data-v-d9565426="" class="text-xs-center pt-2 pb-1">系统将于<span data-v-d9565426="" class="px-1 primary--text">0</span>秒后自动退出
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div data-v-790bada4="" class="v-card__text py-0" style="max-height: 150px; overflow-y: auto;">
+                        <!---->
+                    </div>
+                    <!---->
+                    <div data-v-790bada4="" class="v-card__actions">
+                        <div data-v-790bada4="" class="spacer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div tabindex="-1" data-v-790bada4="" class="v-dialog__content" style="z-index: 0;">
+            <div class="v-dialog v-dialog--persistent" style="max-width: 350px; display: none;">
+                <div data-v-790bada4="" class="v-card v-sheet theme--light" style="max-width: 350px;">
+                    <div data-v-790bada4="" class="v-card__title title" style="height: 56px;"></div>
+                    <div data-v-790bada4="" class="v-card__text py-2 body-1">
+                        <!---->
+                        <div data-v-790bada4="" class="flex justify-center layout row"></div>
+                    </div>
+                    <!---->
+                    <div data-v-790bada4="" class="v-card__text py-0" style="max-height: 150px; overflow-y: auto;">
+                        <!---->
+                    </div>
+                    <!---->
+                    <div data-v-790bada4="" class="v-card__actions">
+                        <div data-v-790bada4="" class="spacer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="application--wrap">
+            <div data-v-19cace2a="" right="" top="">
+                <div data-v-6dc4700a="" data-v-19cace2a=""><span data-v-6dc4700a=""></span>
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+                <div data-v-790bada4="" data-v-19cace2a="" class="v-dialog__container" style="display: block;"></div>
+            </div>
+            <div data-v-790bada4="" data-v-d9565426="" class="v-dialog__container" style="display: block;"></div>
+            <div data-v-e187dc34="" data-v-e3189a58="" class="pt-5 v-card v-card--flat v-sheet v-sheet--tile theme--light">
+                <div data-v-e187dc34="" class="v-card__title mb-3">
+                    <div data-v-e187dc34="" class="layout justify-center">
+                        <div data-v-e187dc34="" class="layout column justify-center">
+                            <div data-v-e187dc34="" class="flex xs12">
+                                <div data-v-e187dc34="" style="text-align: justify;"><span data-v-e187dc34="" style="font-weight: bold; color: green; font-size: 24px; width: 100%; display: inline-block;">本科用户，入校授权有效！</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-v-e187dc34="" role="list" class="v-list theme--light">
+                    <hr data-v-e187dc34="" class="v-divider theme--light">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <div data-v-e187dc34="" role="listitem">
+                        <div class="v-list__tile theme--light">
+                            <div data-v-e187dc34="" class="v-list__tile__action">
+                                <div data-v-e187dc34="" class="layout"><i data-v-e187dc34="" aria-hidden="true" class="v-icon mdi mdi-account theme--light"></i><span data-v-e187dc34="" class="ml-2 mr-2">用户姓名</span></div>
+                            </div>
+                            <div data-v-e187dc34="" class="v-list__tile__content">
+                                <div data-v-e187dc34="" class="v-list__tile__title">
+                                    <div data-v-e187dc34="" class="layout justify-end">
+                                        <h2 data-v-e187dc34="">林维贤</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <div data-v-e187dc34="" role="listitem">
+                        <div class="v-list__tile theme--light">
+                            <div data-v-e187dc34="" class="v-list__tile__action">
+                                <div data-v-e187dc34="" class="layout"><i data-v-e187dc34="" aria-hidden="true" class="v-icon mdi mdi-account-multiple theme--light"></i><span data-v-e187dc34="" class="ml-2 mr-2">登记类型</span></div>
+                            </div>
+                            <div data-v-e187dc34="" class="v-list__tile__content">
+                                <div data-v-e187dc34="" class="v-list__tile__title">
+                                    <div data-v-e187dc34="" class="layout justify-end">
+                                        <h2 data-v-e187dc34="">本科生</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <div data-v-e187dc34="" role="listitem">
+                        <div class="v-list__tile theme--light">
+                            <div data-v-e187dc34="" class="v-list__tile__action">
+                                <div data-v-e187dc34="" class="layout"><i data-v-e187dc34="" aria-hidden="true" class="v-icon mdi mdi-timer theme--light"></i><span data-v-e187dc34="" class="ml-2 mr-2">登记时间</span></div>
+                            </div>
+                            <div data-v-e187dc34="" class="v-list__tile__content">
+                                <div data-v-e187dc34="" class="v-list__tile__title primary--text">
+                                    <div data-v-e187dc34="" class="layout justify-end">
+                                        <h3 data-v-e187dc34="" style="width: 180px;">
+                                            <div data-v-43a209c8="" data-v-e187dc34="" class="wrap">
+                                                <div data-v-43a209c8="" id="box" style="transform: translateX(-86px);">
+                                                    <div data-v-43a209c8="" id="marquee">2022-02-24 17:46:58</div>
+                                                    <div data-v-43a209c8="" id="copy">2022-02-24 17:46:58</div>
+                                                </div>
+                                                <div data-v-43a209c8="" id="node">2022-02-24 17:46:58</div>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <!---->
+                <div data-v-e187dc34="" class="layout justify-center">
+                    <button data-v-e187dc34="" type="button" class="v-btn theme--light primary" onclick="window.location.href = './qr.html'">
+                        <div class="v-btn__content">前往个人二维码</div>
+                    </button>
+                </div>
+                <div data-v-e187dc34="" style="text-align: center; padding: 5px; margin-top: 20px;"><img data-v-e187dc34="" src="./img/bwc_wechat.d6141ed0.png" class="logo-bG9naW5JZD0yMDE5MDIxNDEzMDI" style="width: 50px; height: auto;"></div>
+                <div data-v-e187dc34="" class="v-dialog__container" style="display: block;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/chunk-vendors.98c206fb.js"></script>
+    <script src="./js/app.3cce04b4.js"></script>
+    <script type="text/javascript">
+        function getTime() {
+            var myDate = new Date();
+            var myYear = myDate.getFullYear();
+            var myMonth = myDate.getMonth() + 1;
+            var myDay = myDate.getDate();
+            var myHours = myDate.getHours();
+            var myMinutes = myDate.getMinutes().toString().padStart(2, '0');
+            var mySeconds = myDate.getSeconds().toString().padStart(2, '0');
+            var marquee = document.getElementById("marquee");
+            var copy = document.getElementById("copy");
+            marquee.innerHTML = myYear + "-" + myMonth + "-" + myDay + " " + myHours + ":" + myMinutes + ":" + mySeconds;
+            copy.innerHTML = myYear + "-" + myMonth + "-" + myDay + " " + myHours + ":" + myMinutes + ":" + mySeconds;
+        }
+
+        function doMove() {
+            var box = document.getElementById("box");
+            var position = box.style.transform.replace(/[^\d|^\.|^\-]/g, "") - 1;
+            if (position < -205) {
+                position = 10;
+            }
+            box.style.transform = "translateX(" + position + "px)";
+            window.setTimeout("doMove()", 30);
+        }
+        getTime();
+        doMove();
+    </script>
+</body>
+
+</html>
