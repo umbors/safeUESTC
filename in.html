@@ -913,9 +913,9 @@
         function getTime() {
             var myDate = new Date();
             var myYear = myDate.getFullYear();
-            var myMonth = myDate.getMonth() + 1;
-            var myDay = myDate.getDate();
-            var myHours = myDate.getHours();
+            var myMonth = (myDate.getMonth() + 1).toString().padStart(2, '0');
+            var myDay = myDate.getDate().toString().padStart(2, '0');
+            var myHours = myDate.getHours().toString().padStart(2, '0');
             var myMinutes = myDate.getMinutes().toString().padStart(2, '0');
             var mySeconds = myDate.getSeconds().toString().padStart(2, '0');
             var marquee = document.getElementById("marquee");
@@ -927,7 +927,7 @@
         function doMove() {
             var box = document.getElementById("box");
             var position = box.style.transform.replace(/[^\d|^\.|^\-]/g, "") - 1;
-            if (position < -205) {
+            if (position < -210) {
                 position = 10;
             }
             box.style.transform = "translateX(" + position + "px)";
